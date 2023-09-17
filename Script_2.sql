@@ -3,7 +3,8 @@ create table ORDERS (
 	date date,
 	customer_id integer,
 	product_name text,
-	amount integer
+	amount integer,
+	foreign key (customer_id) references CUSTOMERS (id)
 );
 
 insert into ORDERS (date, customer_id, product_name, amount)
